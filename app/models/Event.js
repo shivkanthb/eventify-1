@@ -7,7 +7,8 @@ var eventSchema=mongoose.Schema({
 	longitude: Number
     },
     date: Date,
-    guests: [Integer]
+    owner: Number,
+    guests: [Number]
 });
 var Event=mongoose.model('Event', eventSchema);
 module.exports=Event;
