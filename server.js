@@ -9,11 +9,12 @@ app.use(session({secret: 'ssshhhhh',
 		 resave: true,
 		 saveUninitialized: true}));
 mongoose.connect('mongodb://localhost:27017/eventify');
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 var port=process.env.PORT || 8080;
 app.get('/',function(req,res){
-    res.json({message: 'hooray! welcome to our api!'});
+    res.json({message: 'hooray! welcome to our api!!!'});
 });
 app.get('/users/:handle',function(req,res){
     var handle=req.params.handle;
